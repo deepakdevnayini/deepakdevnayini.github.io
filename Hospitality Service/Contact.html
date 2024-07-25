@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Welcome to Hospitality System</title>
+        <link rel="stylesheet" href="Style.css">
+        <style>
+            .slideshow-container{
+                position: relative;
+                max-width: 100%;
+                margin: auto:
+            }
+            .slideshow-container img{
+                width: 40%;
+                height: auto;
+            }
+            .slideshow-container .slide{
+                display:none;
+            }
+            .slideshow-container .slide.active{
+                display:block;
+            }
+            footer {
+                background-color: rgb(0, 30, 70);
+                padding: 20px;
+                font-weight: bold;
+                margin-top: 15%;
+                text-align: center;
+    }
+        </style>
+    </head>
+    <body>
+        <div class="banner">
+                <div class="navibar">
+                <img src="Logo.png" class="logo">
+                <ul>
+                    <li><a href="Main page.html">Home</a></li>
+                    <li><a href="Home.html">About us</a></li>
+                    <li><a href="#">Service</a></li>
+                    <li><a href="Contact.html">Contact us</a></li>
+                </ul>
+                </div>
+                <div class="Content">
+                    <H1>WELCOME TO PREMIERE <br> HOSPITALITY SERVICE </H1>
+                    <p>where exceptional experiences and impeccable service await you. <br>Our dedicated team is committed to ensuring your stay is nothing short of extraordinary,<br> with personalized attention to every detail.</p>
+                    <div>
+                        <button type="button"><a href="Home.html">About Hotel</a></button>
+                    </div>
+                    <br><br><br><br>
+                    <div class="about">
+                        <div>
+                            <img src="7.jpg" class="img">
+                        </div><br><br>
+                        <div class="text">
+                            <h2 style="text-align: left; font-size: 40px;">About Hospitality</h2>
+                            <p style="text-align: left; margin-bottom: 20px;">From luxurious accommodations to exquisite dining options and a host of amenities,
+                            we strive to create a warm and inviting atmosphere that will leave you feeling pampered and rejuvenated.
+                            Whether you're traveling for business or leisure,we invite you to immerse yourself in our world-class hospitality and make memories 
+                            that will last a lifetime.</p>
+                        </div>
+                        <br><br><br>
+                        <div class="slideshow-container">
+                            <div class="silde active">
+                            </div>
+                            <div class="slide">
+                                <img src="4.jpg" class="img">
+                            </div>
+                            <div class="slide">
+                                <img src="6.jpg" class="img">
+                            </div>
+                            <div class="slide">
+                                <img src="3.jpg" class="img">
+                            </div>
+                        </div><br><br>
+                        <div class="text">
+                            <h2 style="text-align: left; font-size: 40px;">Services</h2>
+                            <p style="text-align: left; margin-bottom: 20px;">From the moment you arrive, indulge in luxurious accommodations and take advantage of our 24/7 room service, state-of-the-art spa facilities, and a range of recreational activities. Whether you're seeking relaxation or adventure, our goal is to create an unforgettable experience tailored to your preferences. Trust us to exceed your expectations and provide a stay that is truly extraordinary.</p>
+                        </div><br>
+                        <div class="contact">
+                                <h2>Contact Us</h2>
+                                <p style="text-align: left; font-size: 120%;">123 Hospitality Street<br>
+                                City, Country<br>
+                                Phone: 123-456-7890<br>
+                                Email: info@hospitalityservice.com</p>
+                        </div>
+                    </div>
+                    <div class="copy">
+                            <footer style="color: rgba(0, 0, 0, 0);">
+                                &copy; 2023 Hospitality Service. All rights reserved.
+                            </footer>
+                    </div>
+                </div>
+        </div>
+        <script>
+            var slides = document.querySelectorAll('.slide');
+            var currentSlide = 0;
+
+            function showSlide(n) {
+                slides[currentSlide].classList.remove('active');
+                currentSlide = (n+slides.length)%slides.length;
+                slides[currentSlide].classList.add('active');
+            }
+
+            setInterval(function () {
+                showSlide(currentSlide + 1);
+            }, 4000);
+            </script>
+    </body>
+</html>
